@@ -1634,6 +1634,11 @@ test = [
     { name = "pytest" },
 ]
 
+[package.dev-dependencies]
+dev = [
+    { name = "ipython" },
+]
+
 [package.metadata]
 requires-dist = [
     { name = "email-validator", specifier = "==2.2.0" },
@@ -1659,6 +1664,9 @@ requires-dist = [
     { name = "xgboost", specifier = "==2.0.3" },
 ]
 provides-extras = ["test"]
+
+[package.metadata.requires-dev]
+dev = [{ name = "ipython", specifier = ">=8.31.0" }]
 
 [[package]]
 name = "mock"

@@ -136,3 +136,8 @@ test = { features = ["test"], solve-group = "default" }
 
 [tool.pixi.dependencies]
 python = "3.11.*"
+
+[dependency-groups]
+dev = [
+    "ipython>=8.31.0",
+]
