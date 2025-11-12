@@ -208,4 +208,5 @@ __marimo__/
 
 .cache.sqlite
 
-air_quality_model/
+air_quality_model_base/
+air_quality_model_lagged/
