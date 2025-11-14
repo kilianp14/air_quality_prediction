@@ -31,3 +31,4 @@ jobs:
           HOPSWORKS_API_KEY: ${{ secrets.HOPSWORKS_API_KEY }}
         run: |
           uv run ipython 2_air_quality_feature_pipeline.ipynb 
+          uv run ipython 4_air_quality_batch_inference.ipynb
