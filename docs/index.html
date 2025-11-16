@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Air Quality Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<h1>🌤️ Air Quality Prediction Dashboard</h1>
+
+<div class="card">
+    <label for="model-select"><strong>Select model:</strong></label>
+    <select id="model-select">
+        <option value="base">Base</option>
+        <option value="lagged">Lagged</option>
+    </select>
+</div>
+
+<div class="card">
+    <label for="city-select"><strong>Select city:</strong></label>
+    <select id="city-select">
+        <option value="skoghall">Skoghall</option>
+        <option value="årjäng">Årjäng</option>
+        <option value="jonsbyn">Jonsbyn</option>
+        <option value="nykroppa">Nykroppa</option>
+    </select>
+</div>
+
+<div class="card">
+    <h2>Forecast</h2>
+    <img id="forecast-img" alt="Forecast image">
+</div>
+
+<div class="card">
+    <h2>Hindcast</h2>
+    <img id="hindcast-img" alt="Hindcast image">
+</div>
+
+<script>
+    forecast = (model, city) => {
+        return `./air_quality/${model}/images/${city}/pm25_forecast.png`
+    }
+    hindcast = (model, city) => {
+        return `./air_quality/${model}/images/${city}/pm25_hindcast.png`
+    }
+
+    const modelSelect = document.getElementById("model-select");
+    const citySelect = document.getElementById("city-select");
+    const forecastImg = document.getElementById("forecast-img");
+    const hindcastImg = document.getElementById("hindcast-img");
+
+    function updateImages() {
+        const model = modelSelect.value;
+        const city = citySelect.value;
+        forecastImg.src = forecast(model, city);
+        hindcastImg.src = hindcast(model, city);
+    }
+
+    // Initialize on load
+    updateImages();
+
+    // Update when user selects a different city or model
+    modelSelect.addEventListener("change", updateImages);
+    citySelect.addEventListener("change", updateImages);
+</script>
+
+</body>
+</html>

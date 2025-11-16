@@ -32,3 +32,22 @@ jobs:
         run: |
           uv run ipython 2_air_quality_feature_pipeline.ipynb 
           uv run ipython 4_air_quality_batch_inference.ipynb
+      - name: github pages publish
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "Air Quality Dashboard published"
+          commit_options: '--no-verify --signoff'
+
+          file_pattern: 'docs/air_quality/*'
+
+          repository: .
+
+          status_options: '--untracked-files=no'
+
+          skip_dirty_check: true
+
+          skip_fetch: true
+
+          skip_checkout: true
+
+          push_options: '--force'
