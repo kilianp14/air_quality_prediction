@@ -14,7 +14,7 @@ For each city we generate:
 - **Forecast plots** (future predictions)
 - **Hindcast plots** (retrospective accuracy against real observations)
 
-The predictions power a **public GitHub Pages dashboard** with interactive dropdowns:
+The predictions power a [public GitHub Pages dashboard](https://kilianp14.github.io/air_quality_prediction/) with interactive dropdowns:
 - Select **city**
 - Select **model type** → *Base* or *Lagged*
 - Display:
