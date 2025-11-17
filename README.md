@@ -8,7 +8,7 @@ It generates prediction plots every day (forecast & hindcast) and publishes them
 
 ##  Project Overview
 
-We forecast **next-day PM2.5 values** for several cities.  
+We forecast **next-7-days PM2.5 values** for several cities.  
 For each city we generate:
 
 - **Forecast plots** (future predictions)
