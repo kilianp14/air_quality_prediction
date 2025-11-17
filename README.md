@@ -37,11 +37,6 @@ Uses only *meteorological features* (no historical PM 2.5).
 - wind_direction_10m_dominant
 - city
 
-**When it is useful:**
-- When the sensor is new
-- When no lagged PM2.5 data exists
-- As a fallback model
-
 ---
 
 ### 2. **Lagged Model**
